@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+  <html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<title>Home </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="test1.css">
+ <script scr="js.js" ></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+      <div class="nav">
+        <ul>
+            <li id="home" id="test"><a href="index.html"/>Home</a></li>
+            <li id="series"><a href="#"/>Genres</a>
+            <div class="dropdown">
+            <ul>
+                <li><a href="thriller.html">thriller</a></li>
+                <li><a href="drama.html">drama</a></li>
+                <li><a href="comedy.html">comedy</a></li>
+                <li><a href="fantasy.html">fantasy</a></li>
+                <li><a href="action.html">action</a></li>
+            </ul>
+          </div>
+        </li>
+            <li id="info"><a href="info.html">Over deze site </a></li>
+        </ul>
+      </div>
+    <div class="headerBreak"> </div>
+  </div>
+<div class="text">
+<div clas="home"><h1>Deze site gaat over series</h1>
+<h2></h2>
+
+
+</div>
+<button class="myButton" onclick="changeVideo()">Random trailer</button>
+<div class="underrate"><h3>Minder bekende goede series</h3>
+<ul>
+  <li>Penny Dreadful</li>
+  <li>Marco Polo</li>
+  <li>Sense8</li>
+  <li>Ripper Street</li>
+  <li>Jessica Jones</li>
+  <li>Masters of Sex</li>
+  <li>One Tree Hill</li>
+  <li>Heart of Dixie</li>
+</ul>
+</div>
+</div>
+<script>  var videos = [
+    'XwPAyFPacy0',
+    'ZdNK8L3ZdmE',
+    '3zxSwYyb2Vk',
+    'zLyUlTu4KbI',
+    '2HW9rtFYsEw',
+    'iGp_N3Ir7Do',
+    'AifiouvIylM',
+    'R1v0uFms68U',
+];
+
+function changeVideo() {
+  var oldIndex = index;
+  index=Math.floor(Math.random() * videos.length);
+  if(oldIndex == index)
+  {
+    changeVideo();
+  }
+  document.getElementById('test').src = "http://www.youtube.com/embed/" + videos[index];
+}
+
+var index=Math.floor(Math.random() * videos.length);
+var html='<div class="span4"><h3 class="meet"><div></div></h3><iframe id="test" width="600px" height="400px" src="http://www.youtube.com/embed/' + videos[index] + '" frameborder="0" allowfullscreen></iframe></div>';
+document.write(html);
+
+</script>
+<style media="screen">
+  .span4 {
+    height: 400px;
+    width: 600px;
+    float: left;
+    position: absolute;
+    left: 4%;
+    top: 20%; }
+  iframe {
+      border: groove #A38C8C 3px;
+      position:relative;
+      margin-top: -5.6%;
+      border: none; }
+  .myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #d68078;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d68078;
+	box-shadow:inset 0px 1px 0px 0px #d68078;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+	background:-moz-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-webkit-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-o-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-ms-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100',GradientType=0);
+	background-color:#fe1a00;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000000;
+  margin-left: 16%;
+  z-index: 5;
+  position: relative; }
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
+	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-ms-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
+	background-color:#ce0100; }
+.myButton:active {
+	position:relative;
+	top:1px; }
+h1 {
+margin-left: 15em;
+margin-bottom: -1%;
+font-family: 'Montserrat', sans-serif;
+text-shadow: 1.5px 1.5px #302C2C;
+}
+.underrate {
+  margin-left: 50%;
+  position: absolute;
+}
+.underrate ul {
+}
+</style>
+</body>
+
+  </html>
 
